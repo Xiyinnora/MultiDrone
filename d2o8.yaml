@@ -1,0 +1,55 @@
+bounds:
+  x: [0, 50]
+  y: [0, 50]
+  z: [0, 10]
+
+initial_configuration: [[2, 25, 1], [5, 25, 1]]
+
+goals:
+  - position: [48, 25, 1]
+    radius: 1.0
+  - position: [45, 27, 1]
+    radius: 1.0
+
+obstacles:
+  # Narrow passage H-type walls
+  - type: box
+    position: [20, 10, 4]
+    size: [2, 20, 8]
+    rotation: [0,0,0]
+    color: red
+  - type: box
+    position: [30, 30, 4]
+    size: [2, 20, 8]
+    rotation: [0,0,0]
+    color: red
+  - type: box
+    position: [25, 20, 1]
+    size: [10, 5, 2]
+    rotation: [0,0,0]
+    color: red
+
+  # Additional obstacles for clutter
+  - type: sphere
+    position: [15, 35, 2]
+    radius: 2.0
+    color: red
+  - type: sphere
+    position: [35, 15, 2]
+    radius: 2.0
+    color: red
+  - type: cylinder
+    endpoints: [[10, 25, 0], [10, 25, 10]]
+    radius: 2.0
+    rotation: [0,0,0]
+    color: red
+  - type: cylinder
+    endpoints: [[40, 25, 0], [40, 25, 10]]
+    radius: 2.0
+    rotation: [0,0,0]
+    color: red
+  - type: box
+    position: [25, 40, 1]
+    size: [5, 5, 2]
+    rotation: [0,0,0]
+    color: red
