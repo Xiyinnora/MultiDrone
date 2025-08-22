@@ -24,7 +24,18 @@ def run_single_test(num_drones, env_file):
 
 if __name__ == "__main__":
     # Example: 2 drones, environment.yaml
-    #run_single_test(num_drones=2, env_file="environment.yaml")
-    run_single_test(num_drones=2, env_file="d2o8.yaml")
-     #run_single_test(num_drones=4, env_file="d4o8.yaml")
+    #run_single_test(num_drones=2, env_file="environment.yaml")#d2o4
+    #run_single_test(num_drones=2, env_file="d2o8.yaml")
+    #run_single_test(num_drones=2, env_file="d2o12.yaml")
+    #run_single_test(num_drones=4, env_file="d4o4.yaml")
+    # run_single_test(num_drones=4, env_file="d4o8.yaml")
+    #run_single_test(num_drones=4, env_file="d4o12.yaml")
+    #run_single_test(num_drones=6, env_file="d6o4.yaml")
+    #run_single_test(num_drones=6, env_file="d6o8.yaml")
+    # run_single_test(num_drones=6, env_file="d6o12.yaml")
+    # run_single_test(num_drones=8, env_file="d8o4.yaml")
+    #run_single_test(num_drones=8, env_file="d8o8.yaml")
+    run_single_test(num_drones=8, env_file="d8o12.yaml")
+
+
 

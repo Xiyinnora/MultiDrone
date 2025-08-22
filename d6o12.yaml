@@ -1,0 +1,95 @@
+bounds:
+  x: [0, 50]
+  y: [0, 50]
+  z: [0, 10]
+
+# 6 drones start positions
+initial_configuration:
+  - [2, 5, 1]   # Drone 1
+  - [5, 5, 1]   # Drone 2
+  - [2, 8, 1]   # Drone 3
+  - [5, 8, 1]   # Drone 4
+  - [2, 11, 1]  # Drone 5 (new)
+  - [5, 11, 1]  # Drone 6 (new)
+
+# 6 drones goals
+goals:
+  - position: [45, 45, 1]  # Goal for Drone 1
+    radius: 1.0
+  - position: [42, 45, 1]  # Goal for Drone 2
+    radius: 1.0
+  - position: [45, 42, 1]  # Goal for Drone 3
+    radius: 1.0
+  - position: [42, 42, 1]  # Goal for Drone 4
+    radius: 1.0
+  - position: [45, 39, 1]  # Goal for Drone 5 (new)
+    radius: 1.0
+  - position: [42, 39, 1]  # Goal for Drone 6 (new)
+    radius: 1.0
+
+obstacles:
+  # Vertical box walls forming maze-like corridors
+  - type: box
+    position: [15, 10, 1]
+    size: [2, 20, 2]
+    rotation: [0, 0, 0]
+    color: red
+  - type: box
+    position: [25, 15, 1]
+    size: [2, 20, 2]
+    rotation: [0, 0, 0]
+    color: red
+  - type: box
+    position: [35, 10, 1]
+    size: [2, 20, 2]
+    rotation: [0, 0, 0]
+    color: red
+  - type: box
+    position: [20, 35, 1]
+    size: [2, 20, 2]
+    rotation: [0, 0, 0]
+    color: red
+
+  # Horizontal box walls forming maze corridors
+  - type: box
+    position: [10, 20, 1]
+    size: [20, 2, 2]
+    rotation: [0, 0, 0]
+    color: red
+  - type: box
+    position: [30, 30, 1]
+    size: [20, 2, 2]
+    rotation: [0, 0, 0]
+    color: red
+  - type: box
+    position: [15, 40, 1]
+    size: [20, 2, 2]
+    rotation: [0, 0, 0]
+    color: red
+  - type: box
+    position: [35, 25, 1]
+    size: [20, 2, 2]
+    rotation: [0, 0, 0]
+    color: red
+
+  # Spherical obstacles as dead-ends
+  - type: sphere
+    position: [28, 18, 1]
+    radius: 2.0
+    color: red
+  - type: sphere
+    position: [18, 32, 1]
+    radius: 2.0
+    color: red
+
+  # Cylindrical obstacles as pillars
+  - type: cylinder
+    endpoints: [[25, 25, 0], [25, 25, 10]]
+    radius: 2.0
+    rotation: [0, 0, 0]
+    color: red
+  - type: cylinder
+    endpoints: [[35, 35, 0], [35, 35, 10]]
+    radius: 2.0
+    rotation: [0, 0, 0]
+    color: red

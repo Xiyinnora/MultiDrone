@@ -1,0 +1,77 @@
+bounds:
+  x: [0, 50]
+  y: [0, 50]
+  z: [0, 10]
+
+# 8 drones start positions
+initial_configuration:
+  - [2, 5, 1]   # Drone 1
+  - [2, 10, 1]  # Drone 2
+  - [2, 15, 1]  # Drone 3
+  - [2, 20, 1]  # Drone 4
+  - [2, 25, 1]  # Drone 5
+  - [2, 30, 1]  # Drone 6
+  - [2, 35, 1]  # Drone 7 (new)
+  - [2, 40, 1]  # Drone 8 (new)
+
+# 8 drones goals
+goals:
+  - position: [48, 5, 1]   # Goal for Drone 1
+    radius: 1.0
+  - position: [48, 10, 1]  # Goal for Drone 2
+    radius: 1.0
+  - position: [48, 15, 1]  # Goal for Drone 3
+    radius: 1.0
+  - position: [48, 20, 1]  # Goal for Drone 4
+    radius: 1.0
+  - position: [48, 25, 1]  # Goal for Drone 5
+    radius: 1.0
+  - position: [48, 30, 1]  # Goal for Drone 6
+    radius: 1.0
+  - position: [48, 35, 1]  # Goal for Drone 7 (new)
+    radius: 1.0
+  - position: [48, 40, 1]  # Goal for Drone 8 (new)
+    radius: 1.0
+
+obstacles:
+  # Narrow passage H-type walls
+  - type: box
+    position: [20, 10, 4]
+    size: [2, 20, 8]
+    rotation: [0,0,0]
+    color: red
+  - type: box
+    position: [30, 30, 4]
+    size: [2, 20, 8]
+    rotation: [0,0,0]
+    color: red
+  - type: box
+    position: [25, 20, 1]
+    size: [10, 5, 2]
+    rotation: [0,0,0]
+    color: red
+
+  # Additional obstacles for clutter
+  - type: sphere
+    position: [15, 35, 2]
+    radius: 2.0
+    color: red
+  - type: sphere
+    position: [35, 15, 2]
+    radius: 2.0
+    color: red
+  - type: cylinder
+    endpoints: [[10, 25, 0], [10, 25, 10]]
+    radius: 2.0
+    rotation: [0,0,0]
+    color: red
+  - type: cylinder
+    endpoints: [[40, 25, 0], [40, 25, 10]]
+    radius: 2.0
+    rotation: [0,0,0]
+    color: red
+  - type: box
+    position: [25, 40, 1]
+    size: [5, 5, 2]
+    rotation: [0,0,0]
+    color: red
